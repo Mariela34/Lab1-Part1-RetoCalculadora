@@ -500,7 +500,7 @@ public class MyCalculator extends javax.swing.JPanel {
                 this.Result.setText("0");
 
             } else {
-                numbers = value.split("\\"+operator, 5);
+                numbers = value.split("\\"+operator);
                 
                 switch (operator) {
                     case "+":

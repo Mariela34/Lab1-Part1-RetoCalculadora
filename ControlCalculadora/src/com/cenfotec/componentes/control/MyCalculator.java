@@ -412,7 +412,7 @@ public class MyCalculator extends javax.swing.JPanel {
                 this.Result.setText("0");
 
             } else {
-                numbers = value.split(operator, 5);
+                numbers = value.split("\\"+operator);
                 
                 switch (operator) {
                     case "+":
@@ -431,6 +431,20 @@ public class MyCalculator extends javax.swing.JPanel {
                         result = "Error";
                         break;
                 }
+                this.Number1.setEnabled(false);
+                this.Number2.setEnabled(false);
+                this.Number3.setEnabled(false);
+                this.Number4.setEnabled(false);
+                this.Number5.setEnabled(false);
+                this.Number6.setEnabled(false);
+                this.Number7.setEnabled(false);
+                this.Number8.setEnabled(false);
+                this.Number9.setEnabled(false);
+                this.btnMin.setEnabled(false);
+                this.btnPlus.setEnabled(false);
+                this.btnDivide.setEnabled(false);
+                this.btnMultiple.setEnabled(false);
+                this.btnCalculate.setEnabled(false);
 
                 this.Result.setText(result);
             }
@@ -444,6 +458,20 @@ public class MyCalculator extends javax.swing.JPanel {
 
     private void btnResetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMouseClicked
         this.Result.setText("0");
+        Number1.setEnabled(true);
+        Number2.setEnabled(true);
+        Number3.setEnabled(true);
+        Number4.setEnabled(true);
+        Number5.setEnabled(true);
+        Number6.setEnabled(true);
+        Number7.setEnabled(true);
+        Number8.setEnabled(true);
+        Number9.setEnabled(true);
+        btnMin.setEnabled(true);
+        btnPlus.setEnabled(true);
+        btnDivide.setEnabled(true);
+        btnMultiple.setEnabled(true);
+        btnCalculate.setEnabled(true);
     }//GEN-LAST:event_btnResetMouseClicked
 
     private void Number0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number0ActionPerformed
